@@ -1,0 +1,341 @@
+{
+	"info": {
+		"_postman_id": "356201ff-32d3-4624-8e20-654fff54fde1",
+		"name": "Te",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15353262",
+		"_collection_link": "https://orange-shuttle-125584.postman.co/workspace/New-Team-Workspace~f74efca8-ab36-4820-832b-9c45e9c0c9da/collection/15353262-356201ff-32d3-4624-8e20-654fff54fde1?action=share&source=collection_link&creator=15353262"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@example.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/Auth/login",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjRiMWJjMDBmZTAxNzkwZmJlY2QyNTk4NmE0ZDZhNDRlNjhkZjBmYjA0YWQ0MzQ4ZmEyMjUyNDNlNWE2YmI5NDIzMTNiYWM2MmRjOWI2MjYiLCJpYXQiOjE3MDAzMjgwOTQuMzM2NjQ5LCJuYmYiOjE3MDAzMjgwOTQuMzM2NjUxLCJleHAiOjE3MzE5NTA0OTQuMzI5NjYsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.MV_7RIsx1nIRJFmm8RaNF2ZoyCzzYpjXAEcri_-wNNTwofOAWaLQpmHilGlbHJGPPy7edTPRfvjm9iwqij9Cne0pkFYCVA7qpV0sAzUBGoHwUOdEiWbSUzAXhtN78B_yK-f6DX5LiesxgPvYh2nGH4iWqY8eLzH1KPIShdvBPK3R-T8W4Ln-BWeAPkAkL5lMAUZUvHdT4v7VfjbvMXyLAtD033ruwhhNITACYPRrbojRPdMBHX8BvyHZ4Z2NCh6TGyPHJdqWIJhaPQ2eRUicCdfJzqtgBtKqGTiqqFzdhVTz54drkqLPslT4fpMJ2XlowfI9lCYXu0RTSt-GUpI3RiHywZrdhwvW3AkYB7njYeUpbgmADhdUGyN7KEOek93bH3ziroiJGWiV6R9Z9diVt9oDMun7pT2DqWI36ne_IvtBcJ_UgPUn5sFBSZ8qC6pZVGNenoiDf68XIVDoV85NyqUl_U0hnADjfWAU_Hzjrd7v8N9dfO4V8RFswogRyviZ_jzAAzdX_9P9rjBs1g77H4I-iwYnmLDkid0fcbw3FuuxJ6ayzXsfV1xqbuvynCpPIyB0li7GY3rMFQPnHWx3YpBEXmW-313SHSf2jdhyFhbq8ErcJMYuCnZo23Q-L-oJEKQPrvG9ejRQQ4HiCkPWHIPhXBewh5Mvewz2eZ7zv7Y",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/Auth/logout",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transactions",
+			"item": [
+				{
+					"name": "createTransaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjFjZDBjZjAzMThjZWFiNjZjNzQ5Y2Y2YWI2ZTkwYzRjZDQwNzZjNjdlMjg1MzliMDI5YWNhYTY0OWJjOTcwNzZmMzdhNzYwYTU3ZGQxODAiLCJpYXQiOjE3MDA0MTE2NDEuNzQ0NTk1LCJuYmYiOjE3MDA0MTE2NDEuNzQ0NTk3LCJleHAiOjE3MzIwMzQwNDEuNzMzNTksInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lJV-LF2vBKTbPton6Bet0MhiadXsmorCn64gvLPchw1xhUTHAkFNPPukxwMsOdM7Eo_Z3sVc5Z11zEcSROoD--xA4IXOo9G5hwMwFsiy3Si-z8jAA32dHUSQCvJYN8qksN6_mPe311Svu12CbGyf7ztCcG8_Q3CVG0QscclW2eJcCWrB9D3KNuZbMmG9nAx10a47VKO33zs_yUmnmUWqeRuK0YN6ZzETr1bJyo81FJjWcEAFmmnofIqwaiIc2B_MAWgWBt0mHLg6v-2AiFvjGQRYoRcWE-Q0mJP8-r7qxPbm5iBGhkh7LRJgKhtLb-44dAVEoR5Rs9JrskMjCOe6JRdDQjjz-TFgteRzCkTXOQ-yOZnT-2MZI5GXxmk6mpXl1RR9rYyTUljkyQ56p3qlm8q2-myYCA5ED2hpfFV7yg_5R59isPBL1Qgk6tmj7aLHfLDITfiLXoZCfB6DHwP4p_GZWYxV1wfhC6fw2vXHJlcdZA2Sn-mxibv1FqVHrBFa5YMhnE5HUx_9aIbXnWU_dh4326UrvIhi72UunVehMQPa1MBpyPhfH9S1vf1vnY3n3ZCfoFDD7AM792cJJ_qlBmCyUeZ0pp9gtDXVnePaic4Bkb8yaTK7HyvMlCLV637tp0YtlI4yeP5YnrQJ530Wj5GARJRbA4ntmtz7zPWS1Ac",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "due_on",
+									"value": "2023-12-07",
+									"type": "text"
+								},
+								{
+									"key": "vat",
+									"value": "14",
+									"type": "text"
+								},
+								{
+									"key": "is_vat_inclusive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1140",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/Transactions/createTransaction",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Transactions",
+								"createTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "recordPayment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjFjZDBjZjAzMThjZWFiNjZjNzQ5Y2Y2YWI2ZTkwYzRjZDQwNzZjNjdlMjg1MzliMDI5YWNhYTY0OWJjOTcwNzZmMzdhNzYwYTU3ZGQxODAiLCJpYXQiOjE3MDA0MTE2NDEuNzQ0NTk1LCJuYmYiOjE3MDA0MTE2NDEuNzQ0NTk3LCJleHAiOjE3MzIwMzQwNDEuNzMzNTksInN1YiI6IjEiLCJzY29wZXMiOltdfQ.lJV-LF2vBKTbPton6Bet0MhiadXsmorCn64gvLPchw1xhUTHAkFNPPukxwMsOdM7Eo_Z3sVc5Z11zEcSROoD--xA4IXOo9G5hwMwFsiy3Si-z8jAA32dHUSQCvJYN8qksN6_mPe311Svu12CbGyf7ztCcG8_Q3CVG0QscclW2eJcCWrB9D3KNuZbMmG9nAx10a47VKO33zs_yUmnmUWqeRuK0YN6ZzETr1bJyo81FJjWcEAFmmnofIqwaiIc2B_MAWgWBt0mHLg6v-2AiFvjGQRYoRcWE-Q0mJP8-r7qxPbm5iBGhkh7LRJgKhtLb-44dAVEoR5Rs9JrskMjCOe6JRdDQjjz-TFgteRzCkTXOQ-yOZnT-2MZI5GXxmk6mpXl1RR9rYyTUljkyQ56p3qlm8q2-myYCA5ED2hpfFV7yg_5R59isPBL1Qgk6tmj7aLHfLDITfiLXoZCfB6DHwP4p_GZWYxV1wfhC6fw2vXHJlcdZA2Sn-mxibv1FqVHrBFa5YMhnE5HUx_9aIbXnWU_dh4326UrvIhi72UunVehMQPa1MBpyPhfH9S1vf1vnY3n3ZCfoFDD7AM792cJJ_qlBmCyUeZ0pp9gtDXVnePaic4Bkb8yaTK7HyvMlCLV637tp0YtlI4yeP5YnrQJ530Wj5GARJRbA4ntmtz7zPWS1Ac",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "transaction_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "paid_on",
+									"value": "2023-11-19",
+									"type": "text"
+								},
+								{
+									"key": "details",
+									"value": "test test",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/Transactions/recordPayment",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Transactions",
+								"recordPayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewTransactions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmU3MjI5ZmZlY2NlMDU5NmViZWQwYTk3ZGZlNzZmY2NiNzE4ZWM4NzVkMjFhMmNjNzc1YmRmYzczMzBkNWRmZTIwYTRjNjhkYTQ4ODY4NDYiLCJpYXQiOjE3MDA0MTE3MzUuMzcwNDg5LCJuYmYiOjE3MDA0MTE3MzUuMzcwNDkyLCJleHAiOjE3MzIwMzQxMzUuMzYyMzQ5LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.LJnDeLY_Ljlc0tGvViPqKRupZxT_m5m1tj563p2BIE6wQwRafGYzf23PR1XSFteo2ezXmmmrfqbzYhwwkzIRx3zc3tw7hxaWb58zF2qzbSmGx0iXPefIyGJPPknoFEefg_2IpprnzMnF0fxIc6wTPPb3YF_yrwzqJoYckqeEtLv0zFgm0SLp5nkZrkbDnxrMA8G4-EwWUqwzaObZJvgVBe4JtxXoWk8uj-mwMf5KH8mrjeYOA91xSrnamxjYlYSLhEczR-l-Yqw3u6UEp30Y5ssisEf-JEH9HPXTpMEepB9ZltR8YGsEFot5TohwcHoUaU2I12MIBkVd_2iTW_lOXydU7LJrUIColL8iH6stUnGxVYINUjrG39yWrLC3_Zdf0oBMh_lIxpjlVl7xDrfJOkM3Fd5iq3ADor_lnRZv5yyA3eXVfRqJFMjwuyvugtjHxNbCw-PnrXwhfpkmFv3CMyuneJuO-TCLXlnJkLRGt1WMBFMkkmW4WO0WnZIpDnCQcK9edTw4KaUaCmeisBhJP_g5PpcnLEyDn3mZGf5sgvUTYqMa1k6iOLpyiS0eUCmR9ty-Ms4OGeFTu7C7z8PRlXN2B6R-Rm-Tn2A27irvH3efCXkWyGW8xpjPP6a91rrHeFCdVTDcnyWdiT0Z1eST9nXgiNCtru-egsRKlnWX-7U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/Transactions/viewTransactions",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Transactions",
+								"viewTransactions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "generate-monthly-report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYzQ4NzM3OTZkNDBlYjM4ODYzZWM0N2Q0NzUxOTA1ZjM1ODA3OTQ4YzgwMTMyOThhNGU2ZTc1ZmE0ZGEzZGYwN2U2ZDE2Zjk5OTQxNDI0NzEiLCJpYXQiOjE3MDA0MTQ4ODIuNzAzMDA5LCJuYmYiOjE3MDA0MTQ4ODIuNzAzMDExLCJleHAiOjE3MzIwMzcyODIuNjkzNzY5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.M3D1_CKtUgPAX6ikACgnz273hKgk7hEDrxcZr5usNqTf1u9AtxFUadQTIyUwnmx4bUoAJFjveh3AfGGoag0EovPC6XpLA_5ALyP_7jsyixC3MPP46MWP6pgXzhXfREQRXOlbqdcDwy_o7pairLi4MyNT3aGIPG11boyoujYlplM5skhi3a0JkAYr40J0ry59fmnejf_H75ZngLkk0oAv7LlyatH6RUBE1qzwHCECsT3DOIRFXxqiMQEQctmindQBwWLgC0FhXVAcrHUiwgaCrYAM9hF7H3JtmlRo6hyoZxZg-VKo-NLQXPkPiBEeYqbOGuNuGctVU3bQ_9ciaHj2Bo6cRAdh6-f-Fz5zXlC-AldTDhc73Y_wKSfypvJ3wXWO7VUO9WfeY0fF6-NM5Ar4Tt4tXQwIqjGLtkknHPbzoMLJ3zOjS5pk6LuhHLrvdrET1ul8K-Kj8S7cfGB5fFXCQWhCAs6gg1_C95mi4BejG2-O_BUnKjJ6l9mZNSDsYbd48UmNZUVNm8pqS2G7ZcO8Pw0hoXfFGFD3oTWToAbL9WqHuc2sCbJInjdB6bRSI8ib1n1bdfUDoFoCoDkH_j5P-x0jlBpTtSB6ZkXKiVnVVawmtl_CTwa1veFnnXxfdxhYzWZJbrqIqYAhuM8srBXznXUd6WwwjCcloDNiw0OMu9s",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "start_date",
+									"value": "2023-11-01",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-12-01",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/Transactions/generateMonthlyReport",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"Transactions",
+								"generateMonthlyReport"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "http://localhost:80/api",
+			"type": "string"
+		}
+	]
+}
